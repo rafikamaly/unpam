@@ -1,43 +1,45 @@
-import java.text.*;
+
+import java.text.NumberFormat;
 
 public class Latihan1 {
-  public static void main(String[] args) {
-      double Angka = 83243463.342245;
-      double AngkaPecahan = 0.902235643;
 
-      NumberFormat NumberFormatter = NumberFormat.getNumberInstance();
-      NumberFormat CurrFormatter = NumberFormat.getCurrencyInstance();
-      NumberFormat PercentFormatter = NumberFormat.getPercentInstance();
+    public static void main(String[] args) {
+        double Angka = 83243463.342245;
+        double AngkaPecahan = 0.902235643;
 
-      String NumberStr = NumberFormatter.format(Angka);
-      String CurrStr = CurrFormatter.format(Angka);
-      String PercentStr = PercentFormatter.format(AngkaPecahan);
+        NumberFormat NumberFormatter = NumberFormat.getNumberInstance();
+        NumberFormat CurrFormatter = NumberFormat.getCurrencyInstance();
+        NumberFormat PercentFormatter = NumberFormat.getPercentInstance();
 
-      System.out.println("double Angka = " + Angka + " berformat number: " + NumberStr);
-      System.out.println("double Angka = " + Angka + " berformat currency: " + CurrStr);
-      System.out.println("double Angka = " + AngkaPecahan + " berformat Percent: " + PercentStr);
-      
-      System.out.println();
-      System.out.println();
+        String NumberStr = NumberFormatter.format(Angka);
+        String CurrStr = CurrFormatter.format(Angka);
+        String PercentStr = PercentFormatter.format(AngkaPecahan);
 
-      NumberFormatter.setMaximumIntegerDigits(10);
-      CurrFormatter.setMaximumIntegerDigits(10);
-      PercentFormatter.setMinimumIntegerDigits(10);
+        System.out.println("double Angka = " + Angka + " berformat number: " + NumberStr);
+        System.out.println("double Angka = " + Angka + " berformat currency: " + CurrStr);
+        System.out.println("double Angka = " + AngkaPecahan + " berformat Percent: " + PercentStr);
 
-      NumberFormatter.setMaximumIntegerDigits(1);
-      CurrFormatter.setMinimumIntegerDigits(1);
-      PercentFormatter.setMinimumIntegerDigits(1);
+        System.out.println();
+        System.out.println();
 
-      NumberFormatter.setMaximumFractionDigits(5);
-      CurrFormatter.setMaximumFractionDigits(2);
-      PercentFormatter.setMaximumFractionDigits(4);
+        NumberFormatter.setMaximumIntegerDigits(10);
+        CurrFormatter.setMaximumIntegerDigits(10);
+        PercentFormatter.setMinimumIntegerDigits(10);
 
-      NumberFormatter.setMinimumFractionDigits(2);
-      CurrFormatter.setMinimumFractionDigits(2);
-      PercentFormatter.setMinimumFractionDigits(6);
+        NumberFormatter.setMaximumIntegerDigits(1);
+        CurrFormatter.setMinimumIntegerDigits(1);
+        PercentFormatter.setMinimumIntegerDigits(1);
 
-      System.out.println("double Angka = " + Angka + " berformat number: " + NumberFormatter.format(Angka));
-      System.out.println("double Angka = " + Angka + " berformat currency: " + CurrFormatter.format(Angka));
-      System.out.println("double Angka = " + AngkaPecahan + " berformat percent: " + PercentFormatter.format(AngkaPecahan));
-  }
+        NumberFormatter.setMaximumFractionDigits(5);
+        CurrFormatter.setMaximumFractionDigits(2);
+        PercentFormatter.setMaximumFractionDigits(4);
+
+        NumberFormatter.setMinimumFractionDigits(2);
+        CurrFormatter.setMinimumFractionDigits(2);
+        PercentFormatter.setMinimumFractionDigits(6);
+
+        System.out.println("double Angka = " + Angka + " berformat number: " + NumberFormatter.format(Angka));
+        System.out.println("double Angka = " + Angka + " berformat currency: " + CurrFormatter.format(Angka));
+        System.out.println("double Angka = " + AngkaPecahan + " berformat percent: " + PercentFormatter.format(AngkaPecahan));
+    }
 }

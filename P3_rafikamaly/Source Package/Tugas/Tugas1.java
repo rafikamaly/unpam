@@ -1,15 +1,18 @@
 
-import javax.swing.JOptionPane;
-
+import java.util.Scanner;
 
 public class Tugas1 {
-  public static void main(String[] args) {
-      String namaDepan = JOptionPane.showInputDialog("Nama depan anda");
-      String namaBelakang = JOptionPane.showInputDialog("Nama belakang anda");
-      String usia = JOptionPane.showInputDialog("Usia anda");
 
-      String msg = "Identitasmu adalah \n" + namaDepan + " " + namaBelakang + ", usia " + usia + " tahun.";
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-      JOptionPane.showMessageDialog(null, msg);
-  }
+        System.out.println("Masukkan umur: ");
+        int umur = input.nextInt();
+
+        String kategori = (umur < 13) ? "Anak-anak"
+                : (umur < 18) ? "Remaja"
+                        : (umur < 60) ? "Dewasa" : "Lansia";
+
+        System.out.println("Kategori umur: " + kategori);
+    }
 }
